@@ -8,6 +8,7 @@
 - Python3
 - Flask
 - Sqlite
+- Docker-compose
 
 ## task details ##
 - please provide the code either in PHP or in Python
