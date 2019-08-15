@@ -33,7 +33,7 @@ def root():
         itemData = cur.fetchall()
         cur.execute('SELECT categoryId, name FROM categories')
         categoryData = cur.fetchall()
-    itemData = parse(itemData)   
+    itemData = parse(itemData)
     return render_template('home.html', itemData=itemData, loggedIn=loggedIn, firstName=firstName, noOfItems=noOfItems, categoryData=categoryData)
 
 @app.route("/add")
@@ -309,14 +309,14 @@ def payment():
     cur.execute("DELETE FROM kart WHERE userId = " + str(userId))
     conn.commit()
 
-        
+
 
     return render_template("checkout.html", products = products, totalPrice=totalPrice, loggedIn=loggedIn, firstName=firstName, noOfItems=noOfItems)
 
 @app.route("/register", methods = ['GET', 'POST'])
 def register():
     if request.method == 'POST':
-        #Parse form data    
+        #Parse form data
         password = request.form['password']
         email = request.form['email']
         firstName = request.form['firstName']
