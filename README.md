@@ -1,4 +1,4 @@
-# Bigpoint Devops task
+# Bigpoint task for devops engineer
 - write a REST API, available via HTTP
 - use case: shopping basket
 - userstory1: "as a customer, I want to add an item into the basket"
