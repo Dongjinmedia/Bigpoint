@@ -6,4 +6,4 @@ branches:
     - master
 install: pip install flask
 script: export FLASK_APP=main.py
-script: flask run
+script: flask run --host=0.0.0.0
