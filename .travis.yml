@@ -1,0 +1,10 @@
+language: python
+python:
+  - "3.7.2" 
+branches:
+  only:
+    - master
+notifications: # success or not
+  email:
+    recipients:
+      - dongjinmedia@gmail.com

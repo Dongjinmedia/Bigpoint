@@ -354,6 +354,8 @@ def allowed_file(filename):
 def parse(data):
     ans = []
     i = 0
+    
+    
     while i < len(data):
         curr = []
         for j in range(7):
