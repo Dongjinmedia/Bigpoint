@@ -6,7 +6,3 @@ branches:
     - master
 install: pip3 install --upgrade pip
 script: flask run
-notifications: # success or not
-  email:
-    recipients:
-      - dongjinmedia@gmail.com
