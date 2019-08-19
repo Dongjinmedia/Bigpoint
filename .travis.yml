@@ -4,5 +4,5 @@ python:
 branches:
   only:
     - master
-install: pip3 install --upgrade pip
+install: pip install flask
 script: flask run
