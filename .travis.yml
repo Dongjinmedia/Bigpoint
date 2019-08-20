@@ -33,7 +33,7 @@ deploy:
     application: code_deploy_service 
     deployment_group: deploy_group 
     region: ap-northeast-2
-    upload-dir: /home/ec2-user/deploy/
+    upload-dir: /home/ec2-user/deploy/Bigpoint
     wait-until-deployed: true
     on:
       repo: Dongjinmedia/Bigpoint
