@@ -11,8 +11,8 @@ branches:
 before_deploy: 
   - rm -rf node_modules 
   - zip -r bigpoint * 
-  - mkdir -p deploy
-  - mv bigpoint.zip deploy/bigpoint.zip 
+  - mkdir -p /home/ec2-user/deploy
+  - mv /home/ec2-user/bigpoint.zip /home/ec2-user/deploy/bigpoint.zip 
 deploy: 
   - provider: s3 
     access_key_id: AKIA5QF5QPF5GNWTXGPY
@@ -20,7 +20,7 @@ deploy:
     bucket: bigpoint
     region: ap-northeast-2
     skip_cleanup: true 
-    local_dir: deploy 
+    local_dir: /home/ec2-user/deploy 
     wait-until-deployed: true
     on:
       repo: Dongjinmedia/Bigpoint
