@@ -24,9 +24,7 @@ deploy:
   - provider: codedeploy
     access_key_id: AKIA5QF5QPF5GNWTXGPY
     secret_access_key: 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 
-    bucket: bigpoint
-    key: bigpoint.zip
-    bundle_type: zip # 버킷에 저장되어 있는 파일의 확장자
+    revision_type: github
     application: code_deploy_service 
     deployment_group: deploy_group 
     region: ap-northeast-2
