@@ -10,7 +10,7 @@ branches:
     - master
 before_deploy:
   - rm -rf node_modules 
-  - zip -r bigpoint .
+  - zip -r bigpoint *
   - mkdir -p deploy
   - mv bigpoint.zip deploy/bigpoint.zip 
 
