@@ -23,7 +23,7 @@ deploy:
     local_dir: deploy 
     wait-until-deployed: true
     on:
-      repo: dongjinmedia/bigpoint
+      repo: Dongjinmedia/Bigpoint
       branch: master
   - provider: codedeploy 
     access_key_id: AKIA5QF5QPF5GNWTXGPY
@@ -36,5 +36,5 @@ deploy:
     region: ap-northeast-2
     wait-until-deployed: true
     on:
-      repo: dongjinmedia/bigpoint
+      repo: Dongjinmedia/Bigpoint
       branch: master
