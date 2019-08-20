@@ -1,6 +1,8 @@
 language: python
 python:
   - "3.7" 
+before_install:
+  - pip install flask
 branches:
   only:
     - master
