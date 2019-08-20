@@ -35,6 +35,7 @@ deploy:
     region: ap-northeast-2
     file_glob: true
     file: ${PROJECT_NAME}-${TRAVIS_TAG}-${TARGET}.*
+    skip_cleanup: true
     wait-until-deployed: true
     on:
       repo: Dongjinmedia/Bigpoint
