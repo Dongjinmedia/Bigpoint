@@ -34,7 +34,3 @@ deploy:
     on:
       repo: dongjinmedia/bigpoint
       branch: master
-notifications:
-  email:
-    recipients:
-      - dongjinmedia@gmail.com
