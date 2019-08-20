@@ -37,3 +37,6 @@ deploy:
     on:
       repo: Dongjinmedia/Bigpoint
       branch: master
+
+after_deploy:
+  - ./docker-compose up -d
