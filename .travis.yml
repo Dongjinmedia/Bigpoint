@@ -33,9 +33,7 @@ deploy:
     application: code_deploy_service 
     deployment_group: deploy_group 
     region: ap-northeast-2
-    file:
-    - deploy/*.zip
-    skip_cleanup: true
+    upload-dir: /home/ec2-user/deploy/
     wait-until-deployed: true
     on:
       repo: Dongjinmedia/Bigpoint
