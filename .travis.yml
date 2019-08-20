@@ -3,6 +3,7 @@ python:
   - "3.7" 
 before_install:
   - pip install flask
+script: pytest
 branches:
   only:
     - master
