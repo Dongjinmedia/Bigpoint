@@ -4,8 +4,37 @@ python:
 branches:
   only:
     - master
-install: 
-  - pip install flask
-script:
-  - export FLASK_APP=main.py 
-  - flask run --host=0.0.0.0 &
+before_deploy: 
+  - rm -rf node_modules 
+  - zip -r bigpoint * 
+  - mkdir -p deploy
+  - mv bigpoint.zip deploy/bigpoint.zip 
+deploy: 
+  - provider: s3 
+    access_key_id: AKIA5QF5QPF5GNWTXGPY
+    secret_access_key: 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
+    bucket: bigpoint
+    region: ap-northeast-2
+    skip_cleanup: true 
+    local_dir: deploy 
+    wait-until-deployed: true
+    on:
+      repo: dongjinmedia/bigpoint
+      branch: master
+  - provider: codedeploy 
+    access_key_id: AKIA5QF5QPF5GNWTXGPY
+    secret_access_key: 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
+    bucket: bigpoint 
+    key: bigpoint.zip 
+    bundle_type: zip 
+    application: code-deploy-service 
+    deployment_group: deploy_group 
+    region: ap-northeast-2
+    wait-until-deployed: true
+    on:
+      repo: dongjinmedia/bigpoint
+      branch: master
+notifications:
+  email:
+    recipients:
+      - dongjinmedia@gmail.com
