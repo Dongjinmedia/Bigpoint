@@ -34,6 +34,8 @@ deploy:
     deployment_group: deploy_group 
     region: ap-northeast-2
     file_glob: true
+    file:
+    - deploy/*.zip
     file: ${PROJECT_NAME}-${TRAVIS_TAG}-${TARGET}.*
     skip_cleanup: true
     wait-until-deployed: true
