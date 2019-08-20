@@ -33,7 +33,7 @@ deploy:
     bundle_type: zip 
     application: code_deploy_service 
     deployment_group: deploy_group 
-    region: eu-central-1
+    region: ap-northeast-2
     wait-until-deployed: true
     on:
       repo: Dongjinmedia/Bigpoint
