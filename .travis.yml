@@ -26,11 +26,9 @@ deploy:
       repo: Dongjinmedia/Bigpoint
       branch: master
   - provider: codedeploy 
+    revision_type: github
     access_key_id: AKIA5QF5QPF5GNWTXGPY
-    secret_access_key: 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
-    bucket: bigpoint 
-    key: bigpoint.zip 
-    bundle_type: zip 
+    secret_access_key: 2UzE+qJKAYVgp17wLdE93ImvJ2u89HFKv5aCvVQa 
     application: code_deploy_service 
     deployment_group: deploy_group 
     region: ap-northeast-2
