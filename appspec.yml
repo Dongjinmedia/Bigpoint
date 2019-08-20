@@ -1,9 +1,9 @@
 version: 0.0
 os: linux
 files:
-  - source:  /
+  - source:  /home/ec2-user/deploy/Bigpoint
     destination: /home/ec2-user/deploy/Bigpoint/
 hooks:
   AfterInstall: # exec cmd
-    - location: execute-deploy.sh
+    - location: docker-compose up -d
       timeout: 180
