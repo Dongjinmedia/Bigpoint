@@ -18,8 +18,8 @@ deploy:
   - provider: s3 
     access_key_id: AKIA5QF5QPF5GNWTXGPY
     secret_access_key: 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
-    bucket: bigpoint
-    region: eu-central-1
+    bucket: bigpoint3
+    region: ap-northeast-2
     skip_cleanup: true 
     local_dir: deploy 
     wait-until-deployed: true
@@ -29,12 +29,12 @@ deploy:
   - provider: codedeploy
     access_key_id: AKIA5QF5QPF5GNWTXGPY
     secret_access_key: 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 
-    bucket: bigpoint # AWS CodeDeploy가 다운로드 받은 버킷
+    bucket: bigpoint3 # AWS CodeDeploy가 다운로드 받은 버킷
     key: bigpoint.zip # 해당 버킷에 저장되어 있는 파일 이름
     bundle_type: zip # 버킷에 저장되어 있는 파일의 확장자
     application: code_deploy_service 
     deployment_group: deploy_group 
-    region: eu-central-1
+    region: ap-northeast-2
     wait-until-deployed: true
     on:
       repo: Dongjinmedia/Bigpoint
