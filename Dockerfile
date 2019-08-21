@@ -9,7 +9,7 @@ ADD . /code
 WORKDIR /code
 
 # Set environment variables
-ENV FLASK_APP=hello.py
+ENV FLASK_APP=main.py
 
 VOLUME /deploy
 
