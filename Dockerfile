@@ -1,7 +1,7 @@
 FROM python:3.5
 
 # Update and install dependencies
-RUN apt-get update
+RUN apt update
 
 ADD . /code
 
