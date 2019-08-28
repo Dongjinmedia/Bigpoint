@@ -12,4 +12,4 @@ VOLUME /deploy
 
 RUN pip install -r requirements.txt
 
-CMD ["flask", "run"]
+CMD ["python", "main.py"]
